@@ -1,5 +1,8 @@
 export const isSameLength = arr => {
   try {
+    if (!Array.isArray(arr)) {
+      throw 'Function parameter should be an array'
+    }
     if (arr.length < 2) throw 'not'
 
     let standard = arr[0].length
@@ -11,6 +14,6 @@ export const isSameLength = arr => {
     return true
   } catch (err) {
     if (err === 'not') return false
-    console.log('error occured', err)
+    console.error(err)
   }
 }
