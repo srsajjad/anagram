@@ -1,11 +1,13 @@
-export const isSameLength = arr => {
+export const checkSameLength = arr => {
   try {
     if (!Array.isArray(arr)) {
       throw 'Function parameter should be an array'
     }
-    if (arr.length < 2) throw 'not'
+
+    if (arr.length < 2) return 'false'
 
     let standard = arr[0].length
+
     arr.forEach(item => {
       if (typeof item !== 'string') throw 'not'
       if (item.length !== standard) throw 'not'

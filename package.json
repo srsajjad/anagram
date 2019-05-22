@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "backpack-core": "^0.8.3",
+    "jest": "^24.8.0"
+  }
+}
