@@ -2,15 +2,16 @@ import { checkSameLength } from './checkSameLength'
 
 const sfy = x => JSON.stringify(x)
 
-const checkAnagram = (...args) => {
+export const checkAnagram = (...args) => {
   try {
     let isSameLength = checkSameLength(args)
     if (!isSameLength) return false
 
     let dictionaryList = args.map(item => {
-      let itemArr = Array.from(item)
+      if (typeof item !== 'string') throw 'Function parameter should be String'
+      let itemArr = Array.from(item).sort()
       let d = {}
-      itemArr.forEach(s => (d[s] === undefined ? (d[s] = 0) : d[s]++))
+      itemArr.forEach(s => (d[s] === undefined ? (d[s] = 1) : d[s]++))
       return d
     })
 
