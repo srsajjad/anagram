@@ -18,5 +18,5 @@ Test cases are available inside `anagram.test.js`. You could add more tests here
 
 `yarn test`
 
-You need to have installed `yarn` in your system.\
+You need to have `yarn` installed in your system.\
 Alternatively you could use `npm` too.
